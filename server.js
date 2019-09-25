@@ -7,12 +7,11 @@ const { Routes, Database } = require("./config/config");
 		host: "localhost"
 	});
 
-	server.route(Routes);
+	server.route(Routes.public);
 
 	await server.start();
 
-	console.log("Server running on %s", server.info.uri);
-	console.log(Routes);
+	console.log(`Server running on ${server.info.uri}`);
 })();
 
 process.on("unhandledRejection", err => {
