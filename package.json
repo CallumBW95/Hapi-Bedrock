@@ -1,0 +1,20 @@
+{
+	"name": "support-desk",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"server": "node server.js",
+		"watch": "nodemon server.js"
+	},
+	"author": "Callum Bridgford-Whittick",
+	"license": "ISC",
+	"dependencies": {
+		"@hapi/hapi": "^18.4.0",
+		"dotenv": "^8.1.0",
+		"mongoose": "^5.7.1"
+	},
+	"devDependencies": {
+		"nodemon": "^1.19.2"
+	}
+}
