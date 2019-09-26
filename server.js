@@ -1,6 +1,8 @@
 const Hapi = require("@hapi/hapi");
 const { Routes, Database } = require("./config/config");
 
+const path = require("path");
+
 (async () => {
 	const server = Hapi.server({
 		port: process.env.PORT,
@@ -10,7 +12,7 @@ const { Routes, Database } = require("./config/config");
 	server.route(Routes.public);
 
 	await server.start();
-
+	
 	console.log(`Server running on ${server.info.uri}`);
 })();
 

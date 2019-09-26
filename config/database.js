@@ -1,16 +1,14 @@
 const Mongoose = require("mongoose");
-
-//load database
-const { MONGO } = process.env;
+const mongo = process.env.MONGO;
 let Database;
 
-if (!MONGO) {
-	Mongoose.connect(process.env.MONGO);
-  Database = Mongoose.connection;
-  
-  Database.on('error', console.error.bind(console, 'connection error'));
-  Database.once('open', () => console.log('Connection with database succeeded.'));
+if (mongo != "false") {
+	console.log(mongo);
+	Mongoose.connect(mongo);
+	Database = Mongoose.connection;
+
+	Database.on("error", console.error.bind(console, "connection error"));
+	Database.once("open", () => console.log("Connection with database succeeded."));
 }
 
 module.exports = Database;
-

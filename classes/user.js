@@ -2,7 +2,8 @@ const Mongoose = require('mongoose');
 const Joi = require('@hapi/joi');
 const Joigoose = require('joigoose')(Mongoose);
 
-const UserJoi = Joi.object({
+// const UserJoi
+module.exports = Joi.object({
   username: Joi.string().required(),
   firstname: Joi.string(),
   lastname: Joi.string(),
@@ -11,6 +12,6 @@ const UserJoi = Joi.object({
   type: Joi.number().required()
 });
 
-const UserSchema = new Mongoose.Schema(Joigoose.convert(UserJoi));
+// const UserSchema = new Mongoose.Schema(Joigoose.convert(UserJoi));
 
-module.exports = Mongoose.model('User', UserSchema);
+// module.exports = Mongoose.model('User', UserSchema);

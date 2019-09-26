@@ -1,4 +1,4 @@
-var path = require("path");
+const path = require("path");
 // console.log(path.resolve('config', 'authentication.js '));
 
 const { admin } = require(path.resolve("config", "application.js"));
