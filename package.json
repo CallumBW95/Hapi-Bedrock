@@ -10,7 +10,7 @@
 	"author": "Callum Bridgford-Whittick",
 	"license": "ISC",
 	"dependencies": {
-		"@hapi/hapi": "^18.4.0",
+		"@hapi/hapi": "^19.1.1",
 		"@hapi/joi": "^16.1.4",
 		"dotenv": "^8.1.0",
 		"glob": "^7.1.4",
